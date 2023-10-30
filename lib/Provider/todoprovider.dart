@@ -1,11 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
-final TodoProvider = ChangeNotifierProvider((ref) => TodoModel());
-
-final DropdownProvider = ChangeNotifierProvider((ref) => DropdownModel());
 
 class DropdownModel extends ChangeNotifier {
   String updatedialog = "";

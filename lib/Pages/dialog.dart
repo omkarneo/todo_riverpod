@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:todo_riverpod/Provider/todoprovider.dart';
-// import 'package:todoapp/Pages/todopage.dart';
+import '../di/di.dart';
 
 class DialogTodo extends StatefulWidget {
   const DialogTodo({super.key});

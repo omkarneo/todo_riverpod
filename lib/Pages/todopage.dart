@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:todo_riverpod/Pages/updatedialog.dart';
 import 'dart:convert';
-import 'package:todo_riverpod/Provider/todoprovider.dart';
-
+import '../di/di.dart';
 import 'dialog.dart';
 
 class TodoList extends ConsumerStatefulWidget {

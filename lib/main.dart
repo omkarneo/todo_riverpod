@@ -1,8 +1,9 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:todo_riverpod/Provider/todoprovider.dart';
 import 'Pages/todopage.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+import 'di/di.dart';
 
 void main() {
   runApp(const MainApp());
