@@ -67,8 +67,8 @@ class _DialogTodoState extends State<DialogTodo> {
                   if (formKey.currentState!.validate()) {
                     data['Dropdown'] = ref.watch(DropdownProvider).createdialog;
                     data['Task'] = task.text;
-                    data['Time'] =
-                        "${DateTime.now().hour}:${DateTime.now().minute}:${DateTime.now().second}";
+                    data['Time'] = DateTime.now().toIso8601String();
+                    //     "${DateTime.now().hour}:${DateTime.now().minute}:${DateTime.now().second}";
                     Navigator.pop(context, data);
                   }
                 },

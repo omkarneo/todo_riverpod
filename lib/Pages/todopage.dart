@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:intl/intl.dart';
 import 'package:todo_riverpod/Pages/updatedialog.dart';
 import 'dart:convert';
 import '../di/di.dart';
@@ -58,7 +59,8 @@ class _TodoListState extends ConsumerState<TodoList> {
                     side: BorderSide(color: Colors.black),
                     borderRadius: BorderRadius.all(Radius.circular(10.0))),
                 title: Text("${sd["Task"]}"),
-                subtitle: Text("${sd["Dropdown"]} ${sd["Time"]} "),
+                subtitle: Text(
+                    "${sd["Dropdown"]} ${DateFormat("yyyy-MM-dd hh:mm").format(DateTime.parse(sd["Time"]))} "),
                 leading: const Icon(Icons.add_task_rounded),
                 onLongPress: () async {
                   ref
@@ -89,6 +91,9 @@ class _TodoListState extends ConsumerState<TodoList> {
                                         Navigator.pop(context);
                                       },
                                       child: const Text("Cancels")),
+                                ),
+                                const SizedBox(
+                                  width: 10,
                                 ),
                                 Expanded(
                                   child: ElevatedButton(
